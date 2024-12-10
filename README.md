@@ -50,9 +50,11 @@
 </ol>
 
 <h2>📸 Screenshots</h2>
-<p>![Welcome Screen](path/to/screenshot1.png)</p>
-<p>![Meme Generation](path/to/screenshot2.png)</p>
-<p>![Saved Memes](path/to/screenshot3.png)</p>
+
+![image](https://github.com/user-attachments/assets/df8c7a44-82dd-415f-aa03-b509a1c101f5)
+
+![image](https://github.com/user-attachments/assets/3c464094-b4fb-4511-919c-3059a399221f)
+
 
 <h2>🤔 Contributing</h2>
 <p>Contributions are welcome! If you have suggestions or improvements, please feel free to open an issue or submit a pull request. 🙌</p>
