@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+body {
+  background-color: #000; /* Black background */
+  padding: 10px;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  background-color: #2e2e2e; /* Slightly grey */
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.red {
+  background-color: #ff5f57;
+}
+
+.yellow {
+  background-color: #ffbd2e;
+}
+
+.green {
+  background-color: #27c93f;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is hidden */
+  border-right: 4px solid green; /* Creates the cursor effect */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  animation: typing 6s steps(30, end) infinite alternate, blink-caret 0.75s step-end infinite;
+  width: 100%; /* Ensure the width is set to contain the text */
+  max-width: 260px; /* Set maximum width for typewriter effect */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: green; }
+}
+
+
+.terminal-style {
+    position: relative;;
+    background-color: #1a1a1a; /* Dark background */
+    border: 1px solid #333; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the terminal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    max-width: 450px; /* Limit width */
+    margin: 0 auto; /* Center the terminal */
+}
+
+.terminal-dots {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 10px; /* Space below the dots */
+}
+.dot {
+    width: 10px; /* Size of the dot */
+    height: 10px; /* Size of the dot */
+    border-radius: 50%; /* Make it circular */
+    margin: 0 5px; /* Space between dots */
+    animation: dot-blink 1s infinite alternate; /* Animation for blinking effect */
+}
+
+.dot.red {
+    background-color: #ff5f57; /* Red dot */
+}
+
+.dot.yellow {
+    background-color: #ffbd2e; /* Yellow dot */
+}
+
+.dot.green {
+    background-color: #27c93f; /* Green dot */
+}
+
+@keyframes dot-blink {
+    0%, 20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.bar {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid green;
+}
+
+.bar {
+    background-color: #2e2e2e; /* Dark background for the button bar */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the bar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.save-btn, .like-btn, .share-btn {
+    background-color: #4a4a4a; /* Button background */
+    padding: 8px 12px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.save-btn:hover {
+    cursor: pointer;
+    background-color: #5cb85c; /* Green on hover for Save */
+}
+
+.like-btn:hover {
+    cursor: pointer;
+    background-color: #d9534f; /* Red on hover for Like */
+}
+
+.share-btn:hover {
+    cursor: pointer;
+    background-color: #f0ad4e; /* Yellow on hover for Share */
+}
+
+.text-white {
+    color: white; /* White text color */
+}
+
+.loading-container {
+    width: 100%; /* Make it take the full width of the terminal */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 200px; /* Set height to match the image height */
+}
+.saved-memes-container {
+    padding: 50px;
+    background-color: #1a1a1a;
+    border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the start */
+    gap: 10px; /* Gap between items */
+}
+
+.meme-box {
+    background-color: #1a1a1a; /* Dark background for meme box */
+    border: 2px solid green; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 0; /* Remove margin since we're using gap */
+    flex: 1 1 calc(30% - 10px); /* Adjust width for 3 items per row on desktop */
+    max-width: calc(30% - 10px); /* Ensure maximum width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .meme-box {
+        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile */
+        max-width: calc(100% - 10px); /* Ensure maximum width */
+    }
+}
