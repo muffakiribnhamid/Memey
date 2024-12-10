@@ -20,21 +20,20 @@ const MemeContainer = () => {
     }
 
     const generateMeme = () => {
-        setMemeLoading(true); // Start loading
-        fetch("https://meme-api.com/gimme")
+        setMemeLoading(true);
+        fetch('https://meme-api.com/gimme')
             .then((res) => res.json())
             .then((data) => {
                 const randomMeme = data;
-                setMemeImage(randomMeme['preview'][3]); // Ensure this index exists
+                setMemeImage(randomMeme['preview'][3]);
             })
             .catch((error) => {
-                console.error("Error fetching meme:", error);
+                console.error('Error fetching meme:', error);
             })
             .finally(() => {
-                setMemeLoading(false); // End loading
+                setMemeLoading(false);
             });
     }
-
     useEffect(() => {
         generateMeme(); // Fetch a meme when the component mounts
         const timer = setTimeout(() => {
@@ -88,3 +87,4 @@ const MemeContainer = () => {
 };
 
 export default MemeContainer;
+

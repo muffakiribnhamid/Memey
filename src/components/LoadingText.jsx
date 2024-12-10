@@ -5,8 +5,8 @@ const LoadingText = () => {
   return (
     <StyledWrapper>
       <div className="loader">
-        <div className="layer">loading</div>
-        <div className="layer">loading</div>
+        <div className="layer">Loading</div>
+        <div className="layer">Loading</div>
       </div>
     </StyledWrapper>
   );

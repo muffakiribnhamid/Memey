@@ -13,8 +13,8 @@ const Navbar = ({setHomeScreen , setShowSavedMemes}) => {
                 <p onClick={() => {showMainScreen()}} className='text-3xl cursor-pointer text-green-500 font-bold'>Memey</p>
             </div>
             <div className="flex gap-5 ">
-                <a href="https://github.com/muffakiribnhamid" target='_blank' className='text-green-500'>Github</a>
-                <a  className='text-green-500 cursor-pointer' onClick={() => {setShowSavedMemes(true)}}>Saved Memes</a>
+                <a href="https://github.com/muffakiribnhamid" target='_blank' className='text-green-500 hover:text-white transition-all'>Github</a>
+                <a  className='text-green-500 cursor-pointer hover:text-white transition-all' onClick={() => {setShowSavedMemes(true)}}>Saved Memes</a>
             </div>
         </div>
     </div>
